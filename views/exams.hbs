@@ -1,0 +1,218 @@
+
+
+<div class="comment">
+<P>
+Form Deans’ Desk
+Good performance is the ultimate goal of our school and this is the expectation by the BOM, Parents, Teachers, Students and many other stakeholders. But good performance don’t just happen it’s always the result of high intention, sincere effort, well guided directions and skillful execution through the curriculum department.
+The school has continuously posted a positive index in the KCSE exams over the years. In 2022, the school emerged 3rd Boys county school within Kangema sub-county as a result of selfless stewardship of our principal Mr J.N.Gicongi.
+Teamwork is our driving force and our collective efforts have led to timely syllabus coverage and creative academic programs ensures no learner is left behind in academic achievement 
+Our performance for the last three years is as follows and we believe our 2023 mean score target of above 5.0 is achievable.
+</P>
+</div>
+<div class="yearly_result">
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th colspan="18" style="text-align: center;">PROGRESSIVE KCSE ANALYSIS</th>
+        </tr>
+        <tr>
+            <th scope="col">YEAR</th>
+            <th scope="col">ENTRY</th>
+            <th scope="col">A</th>
+            <th scope="col">A-</th>
+            <th scope="col">B+</th>
+            <th scope="col">B</th>
+            <th scope="col">B-</th>
+            <th scope="col">C+</th>
+            <th scope="col">C</th>
+            <th scope="col">C-</th>
+            <th scope="col">D+</th>
+            <th scope="col">D</th>
+            <th scope="col">D-</th>
+            <th scope="col">E</th>
+            <th scope="col">X</th>
+            <th scope="col">Y</th>
+            <th scope="col">MSS</th>
+            <th scope="col">CANDIDATES WITH C+ &gt; </th>
+            {{!-- <th></th> --}}
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td scope="row">PROJECTIONS</td>
+            <td>90</td>
+            <td>-</td>
+            <td>-</td>
+            <td>2</td>
+            <td>2</td>
+            <td>3</td>
+            <td>9</td>
+            <td>19</td>
+            <td>15</td>
+            <td>29</td>
+            <td>11</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>5.144</td>
+            <td>16</td>
+        </tr>
+        <tr>
+            <td scope="row">2022</td>
+            <td>110</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>1</td>
+            <td>7</td>
+            <td>6</td>
+            <td>13</td>
+            <td>18</td>
+            <td>24</td>
+            <td>24</td>
+            <td>14</td>
+            <td>-</td>
+            <td>3</td>
+            <td>-</td>
+            <td>4.401</td>
+            <td>14</td>
+        </tr>
+        <tr>
+            <td scope="row">2021</td>
+            <td>116</td>
+            <td>-</td>
+            <td>-</td>
+            <td>1</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>4</td>
+            <td>9</td>
+            <td>27</td>
+            <td>35</td>
+            <td>27</td>
+            <td>4</td>
+            <td>-</td>
+            <td>-</td>
+            <td>3.638</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td scope="row">2020</td>
+            <td>101</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>1</td>
+            <td>1</td>
+            <td>6</td>
+            <td>4</td>
+            <td>8</td>
+            <td>15</td>
+            <td>36</td>
+            <td>29</td>
+            <td>1</td>
+            <td>-</td>
+            <td>-</td>
+            <td>3.465</td>
+            <td>8</td>
+        </tr>
+    </tbody>
+</table>
+
+</div>
+
+
+<div class="barchart">
+
+<canvas id="myChart" style="max-width: 600px;"></canvas>
+
+<canvas id="candidateCharts" style="max-width: 600px;"></canvas>
+
+</div>
+
+
+<script>
+
+let examChart = document.getElementById('myChart').getContext('2d');
+const barColors = ['red', 'green', 'blue']
+const candColors = ['brown', 'yellow','purple']
+new Chart(examChart, {
+    type: "bar",
+    data: {
+    labels: [2020, 2021, 2022],
+    datasets:[{
+            backgroundColor: barColors,
+            label: 'MSS',
+            data:[3.465, 3.638, 4.401],  
+            
+    }]
+    },
+    options: {
+        scales: {
+     y: {
+        grid: {
+            display: false
+        },
+            ticks: {
+                min: 0
+            }
+        }
+    },
+        legend:{
+        display: false
+    },
+    title:{
+        display: true,
+        text: 'Mean Standard Score',
+        fontSize: 25
+    },
+    }
+       
+});
+
+new Chart(candidateCharts, {
+    type: "bar",
+    data: {
+    labels: [2020, 2021, 2022],
+    datasets:[{
+            backgroundColor: candColors,
+            label: 'Candidates with C+ and above',
+            data:[8, 10, 14],  
+            
+    }]
+    },
+    options: {
+
+    legend:{
+        display: false
+    },
+
+    title:{
+        display: true,
+        text: 'Candidate with C+ and above',
+        fontSize: 25
+    },
+  },
+       
+});
+</script>
+
+
+
+{{!-- var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+var yValues = [55, 49, 44, 24, 15];
+var barColors = ["red", "green","blue","orange","brown"];
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {...}
+}); --}}
