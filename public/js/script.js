@@ -19,7 +19,11 @@ function myFunction() {
 ScrollReveal({ duration: 2500, reset: true, distance: '60px', delay: 400})
 
 ScrollReveal().reveal('.vision', {origin: 'left'})
-ScrollReveal().reveal('.mission', { delay: 500, origin:'bottom' })
-ScrollReveal().reveal('.motto', { delay: 500, origin:'left' })
-ScrollReveal().reveal('.deans_remark', { delay: 500, origin:'right' })
-ScrollReveal().reveal('.core_values', { delay: 600, origin: 'right'})
+ScrollReveal().reveal('.mission', { delay: 300, origin:'bottom' })
+ScrollReveal().reveal('.motto', { delay: 200, origin:'left' })
+ScrollReveal().reveal('.deans_remark', { delay: 300, origin:'right' })
+ScrollReveal().reveal('.core_values', { delay: 400, origin: 'right'})
+
+const getyear = new Date()
+let year = getyear.getFullYear()
+document.getElementById('copy').innerHTML=`copy &copy; right @ ${year} Dr Kiano Boys High School.`
