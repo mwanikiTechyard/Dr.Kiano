@@ -1,3 +1,31 @@
+const closeBtn = document.getElementById("close");
+
+const sideNav = document.querySelector(".side-nav")
+
+const navToggle = document.querySelector(".nav-toggle")
+
+
+
+closeBtn.addEventListener('click', ()=> {
+  sideNav.classList.add('close')
+  sideNav.classList.remove('open-close')
+})
+
+
+navToggle.addEventListener('click', ()=> { 
+  sideNav.classList.remove('close')
+  sideNav.classList.toggle('open-close')
+})
+
+
+
+
+
+
+
+
+
+
 window.onscroll = function() {myFunction()};
 
 // Get the navbar
@@ -16,13 +44,13 @@ function myFunction() {
 }
 
 
-ScrollReveal({ duration: 2500, reset: true, distance: '60px', delay: 400})
+ScrollReveal({ duration: 2500, reset: true, distance: '60px', delay: 300})
 
 ScrollReveal().reveal('.vision', {origin: 'left'})
-ScrollReveal().reveal('.mission', { delay: 300, origin:'bottom' })
+ScrollReveal().reveal('.mission', { delay: 200, origin:'bottom' })
 ScrollReveal().reveal('.motto', { delay: 200, origin:'left' })
-ScrollReveal().reveal('.deans_remark', { delay: 300, origin:'right' })
-ScrollReveal().reveal('.core_values', { delay: 400, origin: 'right'})
+ScrollReveal().reveal('.deans_remark', { delay: 200, origin:'right' })
+ScrollReveal().reveal('.core_values', { delay: 300, origin: 'right'})
 
 const getyear = new Date()
 let year = getyear.getFullYear()
