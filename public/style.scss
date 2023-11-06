@@ -117,10 +117,13 @@ body {
 
 .drive_wrapper {
     padding-top: .4rem;
+    padding-bottom: .4rem;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
     border-top: .2rem solid brown;
+    background-color: rgb(171, 165, 165);
+
 
 }
 
@@ -213,7 +216,7 @@ body {
             display: inline-block;
             align-content: center;
             height: 4px;
-            width: 10rem;
+            width: 6rem;
             background-color: #b05a03;
         }
 
@@ -221,7 +224,7 @@ body {
             content: '';
             display: inline-block;
             height: 4px;
-            width: 10rem;
+            width: 6rem;
             background-color: #b05a03;
         }
     }
@@ -265,7 +268,7 @@ body {
             display: inline-block;
             align-content: center;
             height: 4px;
-            width: 10rem;
+            width: 8rem;
             background-color: #b05a03;
         }
 
@@ -273,7 +276,7 @@ body {
             content: '';
             display: inline-block;
             height: 4px;
-            width: 10rem;
+            width: 8rem;
             background-color: #b05a03;
         }
     }
@@ -387,7 +390,8 @@ body {
             img {
                 float: left;
                 height: 120px;
-                border-radius: 2.5rem;
+                shape-outside: circle(50%);
+                border-radius: 100px;
                 margin: .7rem;
             }
         }
@@ -426,7 +430,7 @@ body {
 .side-nav {
     position: absolute;
     top: 0;
-    left: -60%;
+    left: -65%;
     height: 100vh;
     background-color: #010168;
     z-index: 999;
@@ -469,6 +473,18 @@ body {
     }
 }
 
+// start exams page
+
+.comment {
+    margin-top: 2.8rem;
+    padding: .8em;
+
+    .remarks {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1.2em;
+    }
+}
+
 //   start of media queries
 
 @media screen and (max-width: 600px) {
@@ -482,12 +498,7 @@ body {
 
     .open-close {
         left: 0;
-        // left: 60vw;
     }
-
-    // .close {
-    //     display: none;
-    // }
 
     .navigation {
         position: fixed;
@@ -543,17 +554,23 @@ body {
     }
 
     .main-container {
-        // background-color: hsl(0, 0%, 0%);
+        border-top: 3px solid lime;
         padding: 0;
-        margin-top: 1.5rem;
+        margin-top: .6rem;
         margin-right: 0;
         margin-left: 0;
     }
 
+    .carousel {
+        margin-top: 0;
+        padding-top: 0;
+        background-color: #010168;
+    }
+
     .carousel-item {
         img {
-            height: 200px;
-            width: 100%;
+            //    aspect-ratio: 4/3;
+            height: 30vh;
         }
 
         .carousel-caption {
@@ -576,13 +593,13 @@ body {
     .drive_wrapper {
         margin: 0;
         padding: 0;
+        background-image: radial-gradient(#b58484, #4f0e0e);
 
         .school_drive {
             // display: grid;
             // grid-template-columns: auto auto auto auto;
-            margin: 0;
-            padding: 0;
-            padding-top: 2rem;
+            margin-bottom: 0;
+            padding: 2rem 0;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -597,9 +614,10 @@ body {
             .deans_remark {
                 display: none;
             }
-            .vision{
-                img{
-                   aspect-ratio: 16/9;
+
+            .vision {
+                img {
+                    aspect-ratio: 16/9;
                 }
             }
 
@@ -613,11 +631,13 @@ body {
         flex-direction: column;
         padding: 0;
 
+
         .title {
             font-size: .8rem;
 
             h3 {
                 font-size: 1.4rem;
+                color: #181203;
             }
         }
 
@@ -629,12 +649,14 @@ body {
             .card {
                 width: 80%;
                 margin-bottom: 1rem;
-                .card-title{
+
+                .card-title {
                     font-size: 1.4rem;
                     font-weight: bold;
                     text-decoration: underline;
                 }
-                .card-text{
+
+                .card-text {
                     font-size: 1.2rem;
                     font-family: Arial, Helvetica, sans-serif;
                 }
@@ -643,8 +665,12 @@ body {
     }
 
     .about {
+        background-image: linear-gradient(to top left, #1d1d76, #357235, #652323);
+        margin-top: 0;
+
         .title h3 {
             font-size: 1.4rem;
+            color: #fff;
         }
 
         .content {
@@ -655,14 +681,16 @@ body {
             align-content: center;
             font-size: .9rem;
 
-            .card{
+            .card {
                 width: 80%;
                 max-height: fit-content;
-                .card-header{
+
+                .card-header {
                     font-size: 1.5rem;
                     font-family: Arial, Helvetica, sans-serif;
                 }
-                .card-body > .card-text{
+
+                .card-body>.card-text {
                     font-size: 1.2rem;
                     font-family: Arial, Helvetica, sans-serif;
                 }
@@ -670,25 +698,92 @@ body {
         }
     }
 
-    .footer > .container{
+    .history {
+        margin: 0;
+        padding-top: 3rem;
+        background-color: #080221;
+
+        .para {
+            margin: 0;
+            padding: 0;
+
+            p {
+                color: #fff;
+            }
+
+            li {
+                color: darkorange;
+            }
+        }
+    }
+
+    .exams{
+        height: fit-content;
+        display: grid;
+        grid-template-columns: 90%;
+        justify-content: center;
+        padding: 0;
+        .yearly_result table {
+            display: none;
+            // position: absolute;
+            // margin-top: 0;
+            // padding-top: 0;
+            // transform-origin: bottom left;
+            // transform: rotate(90deg);
+            // z-index: -999;
+        }
+
+    }
+    .our_photos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .title{
+            margin-top: 2.5rem;
+        }
+        .photos{
+            justify-content: center;
+        }
+    }
+.contacts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+}
+
+    .footer>.container {
         display: grid;
         align-items: center;
-        
         grid-template-columns: auto auto;
-        grid-template-rows: auto auto;    
-        .links{
+        grid-template-rows: auto auto;
+        justify-content: space-between;
+
+        .links {
             grid-column-start: 1;
             grid-column-end: 2;
-        }   
-       .social{
+
+            a {
+                font-size: .8rem;
+            }
+        }
+
+        .social {
             grid-column-start: 2;
             grid-column-end: 3;
-       }
-       .copyright{
-        margin-top: .8rem;
-        grid-column-start: 1;
-        grid-column-end: 3;
-       }
+
+            a {
+                font-size: .8rem;
+            }
+        }
+
+        .copyright {
+            margin-top: .8rem;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            font-size: .6rem;
+            justify-self: center;
+        }
     }
 
 }

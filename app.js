@@ -30,6 +30,9 @@ app.get('/exams', (req, res)=>{
 app.get('/contacts', (req, res)=>{
     res.render("contacts")
 })
+app.get('/events', (req, res)=>{
+    res.render("events")
+})
 app.get('/contacts', (req, res)=>{
     res.render("contacts")
 })
